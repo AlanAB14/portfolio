@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className={scrolled ? 'sticky' : null}>
             <nav id="nav-menu" className={presionado ? "navbar active" : "navbar"}>
                 <div className="brand-title"><Link onClick={()=> setPresionado(false)} activeClass="active" to="header" spy={true} smooth={true} duration={500}><FaLaptopCode className="navbar-icon"/><span className="navbar-title-name">Alan Bersia</span><span className="navbar-title-profesion">Developer</span></Link></div>
-                <a onClick={() => setPresionado(!presionado)} className="toggle-button">
+                <a href="#" onClick={() => setPresionado(!presionado)} className="toggle-button">
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
