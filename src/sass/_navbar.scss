@@ -1,0 +1,151 @@
+.navbar{
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#4034a8;
+    color: white;
+    font-size: 1.6rem;
+    padding: .6rem 0;
+    box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.20);
+
+    @media (max-width:800px) {
+        padding: 1.6rem 0;
+    }
+
+    &-links{
+        margin-right: 1.5rem;
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li{
+            list-style: none;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover{
+                background-color: $color-tertiary-dark;
+                border-radius: 1rem;
+            }
+        }
+        li a {
+            text-decoration: none;
+            color: $color-grey-light-1;
+            font-size: 1.4rem;
+            letter-spacing: .15rem;
+            padding: 1rem;
+            display: block;
+            @media (max-width:800px) {
+                font-size: 1.6rem;
+                  
+            }
+        }
+    }
+    
+    &-title-name{
+        font-family: inherit;
+        font-weight: 400;
+        color: $color-grey-light-2;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        letter-spacing: .2rem;
+    }
+    &-title-profesion{
+        font-size: 1.3rem;
+    }
+
+    &-icon{
+        margin-left: 1.5rem;
+        width: 2rem;
+    }
+
+}
+
+.brand-title{
+    font-size: 1.6rem;
+    margin: .5rem;
+    color: $color-grey-light-2;
+    letter-spacing: .4rem;
+    cursor: pointer;
+
+}
+
+.toggle-button{
+    position: absolute;
+    top:1.4rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2.1rem;
+
+    @media (max-width:600px) {
+        top:2.3rem;
+        right: 2rem;
+        width: 4rem;
+
+    }
+
+    & .bar{
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+
+        @media (max-width:600px) {
+            height: 2px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+
+        & ul {
+            flex-direction: column;
+            width: 100%;
+
+        }
+        & li {
+            text-align: center;
+
+            & a {
+                padding: .5rem 1rem;
+            }
+        }
+        
+        &.active {
+            border-top: 1px solid $color-tertiary-dark;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            display: flex;
+            animation: dropMenu 300ms ease-in-out forwards;
+            transform-origin: top center;
+
+        }
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+}

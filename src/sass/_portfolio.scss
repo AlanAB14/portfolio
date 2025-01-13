@@ -1,0 +1,28 @@
+.portfolio{
+    padding-top: 7rem;
+    background-color:white;
+    width: 100%;
+    padding-bottom: 7rem;
+
+    &__projects{
+        margin: 6rem 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @supports(display: grid){
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            grid-gap: 17rem;
+        }
+
+        @media (max-width:768px) {
+            grid-gap: 10rem;
+        }
+
+        @media (max-width:400px) {
+            margin: 6rem 6rem;
+    }
+    }
+}

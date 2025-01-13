@@ -1,0 +1,113 @@
+.contacto{
+    padding: 7rem 0;
+    background-color: #ffffff;
+
+    &__formulario{
+        &--btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4rem;
+        }
+    }
+
+    &__formulario form{
+        padding:  4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    &__formulario form input{
+        margin: 2rem 12rem;
+        border: none;
+        font-family: inherit;
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        transition: all .05s;
+        border-radius: 2rem;
+        transition: all .2s;
+    }
+
+    &__formulario form input:focus{
+        background-color: $color-tertiary-light;
+        outline: none;
+
+        &::-webkit-input-placeholder{
+            color: white;
+        }
+        &::-moz-placeholder {
+                color: white;
+        }
+    }
+    &__icons{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--icon{
+            font-size: 4.2rem;
+            color: #555;
+            cursor: pointer;
+
+            &:not(:last-of-type){
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        transform: translateY(-.4rem);
+        box-shadow: 0 .8rem 1.8rem rgba(0, 0, 0, 0.3);
+    }
+
+    &:active{
+        transform: translateY(0);
+        box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.3);
+
+    }
+}
+.bloqueado{
+    color: black;
+}
+.respuesta{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 600;
+    &--exitosa{
+        color: green;
+    }
+    &--erronea{
+        color: red;
+    }
+}
+
+.linkedin {
+    &:hover{
+        color: #007bb6;
+    }
+}
+.github {
+    &:hover{
+        color: #000;
+    }
+}
+.facebook {
+    &:hover{
+        color: #4867aa;
+    }
+}

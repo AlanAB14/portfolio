@@ -1,0 +1,76 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px
+}
+@media (max-width:1200px) {
+    html{
+        box-sizing: border-box;
+        font-size: 58%; //1rem = 10px
+    }
+}
+@media (max-width:970px) {
+    html{
+        box-sizing: border-box;
+        font-size: 55%; //1rem = 10px
+    }
+}
+@media (max-width:800px) {
+    html{
+        box-sizing: border-box;
+        font-size: 50%; //1rem = 10px
+    }
+}
+@media (max-width:600px) {
+    html{
+        box-sizing: border-box;
+        font-size: 40%; //1rem = 10px
+    }
+}
+@media (max-width:300px) {
+    html{
+        box-sizing: border-box;
+        font-size: 30%; //1rem = 10px
+    }
+}
+
+// @media (max-width:800px) {
+//     html{
+//         box-sizing: border-box;
+//         font-size: 40%; //1rem = 10px
+//     }
+// }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: #101d2c;
+    position: relative;
+    overflow-x: hidden;
+}
+

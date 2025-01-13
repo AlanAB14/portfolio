@@ -1,0 +1,95 @@
+.modal{
+
+    cursor: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    // visibility: hidden;
+    transition: all .3s;
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color:rgba($color-black, .2);
+      }
+    
+    &__img{
+        width: 60%;
+        height: auto;
+        @media (max-width:900px) {
+            width: 70%;
+        }
+    }
+    &__card{
+        position: relative;
+        border-radius: 1rem;
+        width: 60vw;
+        height: auto;
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:1000px) {
+            width: 70vw;
+            height: 60vh;
+        }
+        @media (max-width:800px) {
+            width: 70vw;
+        }
+
+        &__enlace{
+            display: inline;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            &:hover .modal__card--link{
+                color: #333;
+            }
+        }
+
+        &--title{
+            margin-top: 2rem;
+        }
+
+        &--img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--link{
+            font-size: 5rem;
+            background-color: $color-grey-light-2;
+            border-radius: 3rem;
+            padding: .8rem;
+            transition: all .3s;
+        }
+    }
+}
+.close--icon{
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: black;
+    transition: all .2s;
+
+    &:hover{
+        color: red;
+    }
+}

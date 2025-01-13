@@ -1,0 +1,21 @@
+.footer{
+    height: 10rem;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__text{
+        font-size: 2rem;
+        color: $color-grey-light-2;
+        @media (max-width:1200px) {
+            font-size: 1.8rem;
+        }
+        @media (max-width:800px) {
+            font-size: 1.6rem;
+              
+        }
+        @media (max-width:400px) {
+            font-size: 1.4rem;
+        }
+    }
+}

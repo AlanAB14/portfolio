@@ -1,0 +1,64 @@
+.skillset{
+    padding: 7rem 0;
+
+
+    &__icons{
+
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @supports(display: grid){
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            grid-gap: 4rem;
+
+        }
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+
+        &__content{
+            position: relative;
+
+            &:hover .img__description{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &--row{
+
+
+
+            &--icon{
+                width: 10rem;
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+.white{
+    color: white !important;
+}
+.img__description {
+    border-radius: 2px;
+    text-align: center;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 11.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    background: $color-grey-light-2;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+  }
